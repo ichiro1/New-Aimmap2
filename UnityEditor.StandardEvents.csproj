@@ -357,6 +357,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="\Users\ucode\Desktop\AimMap\Packages\com.unity.standardevents\Editor\Importer.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -370,6 +371,20 @@
     <None Include="\Users\ucode\Desktop\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageList.uxml" />
     <None Include="\Users\ucode\Desktop\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageManagerWindow.uxml" />
     <None Include="\Users\ucode\Desktop\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
+=======
+    <Compile Include="\Users\ucode\AimMap\Packages\com.unity.standardevents\Editor\Importer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageDetails.uxml" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageGroup.uxml" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageItem.uxml" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageList.uxml" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageManagerWindow.uxml" />
+    <None Include="\Users\ucode\AimMap\Packages\com.unity.package-manager-ui\Editor\Resources\Templates\PackageSearchFilterTabs.uxml" />
+>>>>>>> e277a1e279f021b749a562abfe53209a6a75d4de
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
