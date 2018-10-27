@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/AimMapTest.unity
+- path: Assets/AimMap2.unity
   isLoaded: 1
   isActive: 1
