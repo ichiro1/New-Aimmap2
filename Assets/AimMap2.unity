@@ -717,27 +717,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.005393
+      value: -4.54
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.0756993
+      value: -3.86
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.8963267
+      value: -0.0026714208
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.9101039
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.414318
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.4433943
+      value: -0.0066597257
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_RootOrder
@@ -757,15 +757,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 127.35899
+      value: 48.954002
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -0.000015258789
+      value: 180.86499
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.000015258789
+      value: 0.057000004
       objectReference: {fileID: 0}
     - target: {fileID: 11100000, guid: 26f4603e86e78c841aca62fab44b2672, type: 3}
       propertyPath: m_Enabled
@@ -1875,9 +1875,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3930fad568dc46d1a27a66b97878a80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontSpeed: -5
-  backSpeed: -5
-  moveHorizontal: 5
+  frontSpeed: -10
+  backSpeed: -10
+  leftSpeed: -10
+  rightSpeed: 10
+  moveHorizontal: 0
   moveVertical: 0
   player: {fileID: 1315122991}
 --- !u!54 &1315122991
