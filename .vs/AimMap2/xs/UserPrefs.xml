@@ -1,11 +1,11 @@
 ﻿<Properties StartupConfiguration="{594EE3DB-91EB-59E7-0668-FCB9982DB5CB}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FollowMouseDraft.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Walking.cs">
     <Files>
-      <File FileName="Assets/Scripts/FollowMouse.cs" Line="35" Column="9" />
-      <File FileName="Assets/Scripts/Walking.cs" Line="4" Column="1" />
+      <File FileName="Assets/Scripts/FollowMouse.cs" Line="28" Column="1" />
+      <File FileName="Assets/Scripts/Walking.cs" Line="26" Column="3" />
       <File FileName="Assets/Scripts/Shoot.cs" Line="18" Column="25" />
-      <File FileName="Assets/Scripts/FollowMouseDraft.cs" Line="6" Column="8" />
+      <File FileName="Assets/Scripts/FollowMouseDraft.cs" Line="17" Column="26" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
