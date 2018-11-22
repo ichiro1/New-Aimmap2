@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class Walking : MonoBehaviour {
 
+    [SerializeField] private string horizontalInputName;
+    [SerializeField] private string verticalInputName;
+    [SerializeField] private float movementSpeed;
+
+    private CharacterController characterController;
+    private void Awake()
+    {
+        characterController = GetComponent<CharacterController>();
+    }
+
     /*
 	public float frontSpeed = 5f;
 	public float backSpeed = 5f;
@@ -24,8 +34,8 @@ public class Walking : MonoBehaviour {
     private Vector3 jump; */
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -34,9 +44,8 @@ public class Walking : MonoBehaviour {
 
 
 
-
-
-
+        PlayerMovement();
+        //PlayerMovementRightDraft();
         /*leftmovement = new Vector3(Input.GetAxis("Horizontal") * frontSpeed, player.velocity.y);
         rightmovement = new Vector3(Input.GetAxis("Horizontal") * frontSpeed, player.velocity.y);
         frontmovement = new Vector3(0.0f, player.velocity.y, leftSpeed);
@@ -77,5 +86,16 @@ public class Walking : MonoBehaviour {
         if(Input.GetKey("space")) {
             player.velocity = jump;
         } */
-	}
+    }
+
+    private void PlayerMovement() {
+        float horizInput = Input.GetAxis(verticalInputName) * movementSpeed * Time.deltaTime;
+        float vertInput = Input.GetAxis(horizontalInputName) * movementSpeed * Time.deltaTime;
+
+        Vector3 forwardmovement = transform.forward * horizInput;
+        Vector3 rightMovement = transform.right * vertInput;
+
+        characterController.SimpleMove(forwardmovement + rightMovement);
+    }
+
 }
