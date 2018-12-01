@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2049,7 +2049,7 @@ MonoBehaviour:
   mouseXInputName: Mouse X
   mouseYInputName: Mouse Y
   mouseSensitivity: 80
-  playerBody: {fileID: 1315122989}
+  playerBody: {fileID: 1293405838}
 --- !u!4 &1300213144 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: c3d333e03bd9ad04c8790b505969db54,
@@ -2064,9 +2064,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1315122989}
   - component: {fileID: 1315122991}
-  - component: {fileID: 1315122988}
   - component: {fileID: 1315122992}
   - component: {fileID: 1315122993}
+  - component: {fileID: 1315122988}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -2074,8 +2074,8 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!136 &1315122988
-CapsuleCollider:
+--- !u!65 &1315122988
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -2083,10 +2083,9 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 3.014781
-  m_Height: 20.019173
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.4078884, z: 0}
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &1315122989
 Transform:
   m_ObjectHideFlags: 0
@@ -2129,7 +2128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInputName: Horizontal
   verticalInputName: Vertical
-  movementSpeed: -200
+  movementSpeed: -500
 --- !u!143 &1315122993
 CharacterController:
   m_ObjectHideFlags: 0
