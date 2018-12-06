@@ -13,7 +13,7 @@ public class FollowMouseDraft : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         LockCursor();
-        //xAxisClamp = 0;
+        xAxisClamp = 0;
 	}
     private void LockCursor() {
         Cursor.lockState = CursorLockMode.Locked;
@@ -31,13 +31,13 @@ public class FollowMouseDraft : MonoBehaviour {
         if(xAxisClamp > 90.0f) {
             xAxisClamp = 90.0f;
             mouseY = 0.0f;
-            //ClampXAxisRotationToValue(-270.0f);
+            ClampXAxisRotationToValue(270.0f);
         }
         else if (xAxisClamp < -90.0f)
         {
             xAxisClamp = -90.0f;
             mouseY = 0.0f;
-            ClampXAxisRotationToValue(-90.0f);
+            ClampXAxisRotationToValue(90.0f);
         }
 
         transform.Rotate(Vector3.right * mouseY);

@@ -12,15 +12,15 @@ public class Shoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetMouseButton(0)) {
-            shootTickCount += 1;
-
+        if (Input.GetMouseButtonDown(0)) {
+            //shootTickCount += 1;
+            anim.Play();
         }
 
 
         if(shootTickCount == 25) {
-            anim.Play();
-            shootTickCount = 0;
+            //anim.Play();
+            //shootTickCount = 0;
         }
         if(Input.GetMouseButtonUp(0)) {
             anim.Stop();
