@@ -833,7 +833,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4340163453154592, guid: 1eeeb74352cc943089f9eae06fa54ada, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -0.02
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4340163453154592, guid: 1eeeb74352cc943089f9eae06fa54ada, type: 2}
       propertyPath: m_LocalPosition.y
@@ -931,6 +931,11 @@ Prefab:
       propertyPath: gunbody2
       value: 
       objectReference: {fileID: 1020606400}
+    - target: {fileID: 114114826031148652, guid: 65f99fd8cebb6450dadeec2e3297da57,
+        type: 2}
+      propertyPath: guntrans
+      value: 
+      objectReference: {fileID: 889264718}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65f99fd8cebb6450dadeec2e3297da57, type: 2}
   m_IsPrefabParent: 0

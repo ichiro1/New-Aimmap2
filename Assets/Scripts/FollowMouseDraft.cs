@@ -31,13 +31,13 @@ public class FollowMouseDraft : MonoBehaviour {
         if(xAxisClamp > 90.0f) {
             xAxisClamp = 90.0f;
             mouseY = 0.0f;
-            ClampXAxisRotationToValue(270.0f);
+            ClampXAxisRotationToValue(-270.0f);
         }
         else if (xAxisClamp < -90.0f)
         {
             xAxisClamp = -90.0f;
             mouseY = 0.0f;
-            ClampXAxisRotationToValue(90.0f);
+           ClampXAxisRotationToValue(270.0f);
         }
 
         transform.Rotate(Vector3.right * mouseY);
