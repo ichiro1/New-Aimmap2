@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunSwitch : MonoBehaviour {
 	public Transform gunbody1;
 	public Transform gunbody2;
+	public Transform playerTransform;
 	public int gunbodytransform = 1;
 	
 	// Use this for initialization
@@ -19,7 +20,7 @@ public class GunSwitch : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown("2")) {
+		/*if(Input.GetKeyDown("2")) {
 			gunbody1.position = new Vector3(10,10,10);
 			gunbody2.position = new Vector3(1,14,1);
 			gunbody1.GetComponent<MeshRenderer>().enabled =false;
@@ -29,6 +30,6 @@ public class GunSwitch : MonoBehaviour {
 			gunbody2.position = new Vector3(10,10,10);
 			gunbody1.GetComponent<MeshRenderer>().enabled = true;
 			
-		}
+		}*/
 	}
 }
