@@ -15,6 +15,16 @@ public class Shoot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+        if (Input.GetKeyDown("2")) {
+            aud.mute = !aud.mute;
+        }
+        else if(Input.GetKeyDown("1")) {
+            aud.mute = !aud.mute;
+        }
+            
+        //frameShotCount = frameShotCount * Time.deltaTime;
+
 		if (Input.GetMouseButton (0)) {
 			ifShooting = true;
 			anim.Play ();
@@ -25,10 +35,10 @@ public class Shoot : MonoBehaviour {
 			anim.Stop ();
 			aud.Stop ();
 		}
-		if (frameShotCount == 10) {
+		if (frameShotCount == 15) {
 			aud.Play ();
 		}
-		if(frameShotCount == 15) {
+		if(frameShotCount == 20) {
 			frameShotCount = 1;
 		}
 	}

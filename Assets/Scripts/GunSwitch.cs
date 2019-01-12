@@ -43,10 +43,10 @@ public class GunSwitch : MonoBehaviour {
 	void Update () {
 		
 		if (Input.GetKeyDown ("1")) {
-			gunSwitcher = true;
+            gunSwitcher = false;
 		}
 		if (Input.GetKeyDown ("2")) {
-			gunSwitcher = false;
+            gunSwitcher = true;
 		}
 		if (gunSwitcher == false) {
 			Ak.enabled = true;
@@ -54,6 +54,9 @@ public class GunSwitch : MonoBehaviour {
 			AkShell.enabled = true;
 
 			Colt.enabled = false;
+            ColtShell.enabled = false;
+            ColtMagazine.enabled = false;
+            ColtSlide.enabled = false;
 		} 
 		else if(gunSwitcher == true){
 			Colt.enabled = true;
@@ -62,8 +65,8 @@ public class GunSwitch : MonoBehaviour {
 			ColtSlide.enabled = true;
 
 			Ak.enabled = false;
-			AkMagazine.enabled = true;
-			AkShell.enabled = true;
+            AkMagazine.enabled = false;
+            AkShell.enabled = false;
 		}
 
 	}
