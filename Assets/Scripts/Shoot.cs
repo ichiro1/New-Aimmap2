@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour {
 	public bool ifShooting;
 	public AudioSource aud;
 	private float frameShotCount = 9;
+    private bool isEquipped = false;
 	// Use this for initialization
 	void Start () {
 		ifShooting = false;
@@ -17,10 +18,17 @@ public class Shoot : MonoBehaviour {
 	void Update () {
 
         if (Input.GetKeyDown("2")) {
-            aud.mute = !aud.mute;
+            if(isEquipped == false) {
+                aud.mute = !aud.mute;
+            }
+            isEquipped = true;
         }
         else if(Input.GetKeyDown("1")) {
-            aud.mute = !aud.mute;
+            if(isEquipped == true) {
+                aud.mute = !aud.mute;
+            }
+
+            isEquipped = false;
         }
             
         //frameShotCount = frameShotCount * Time.deltaTime;

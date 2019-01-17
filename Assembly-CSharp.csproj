@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\GunSwitch.cs" />
     <Compile Include="Assets\Scripts\Shoot.cs" />
     <Compile Include="Assets\Scripts\ShootSemiGun.cs" />
+    <Compile Include="Assets\Scripts\TargetRandomPosition.cs" />
     <Compile Include="Assets\Scripts\Walking.cs" />
     <None Include="Assets\3D Models\Props\Weapons\Ammunition\ReadMe.txt" />
     <None Include="Assets\Weapons Pack(LOW POLY)\Weapons Pack info.txt" />

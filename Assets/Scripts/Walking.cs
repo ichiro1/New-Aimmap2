@@ -13,6 +13,7 @@ public class Walking : MonoBehaviour
     public CharacterController characterCont;
 
     public float characterHeight;
+    Vector3 crouchMoveSpeed;
 
     private CharacterController characterController;
     private void Awake()
@@ -60,10 +61,12 @@ public class Walking : MonoBehaviour
             characterCont.height += -10f;
             movementSpeed = -500;
             sprintSpeed = -500;
+            crouchMoveSpeed = new Vector3(movementSpeed, 0, movementSpeed);
         }
         else if(Input.GetKeyUp(KeyCode.LeftControl)) {
             characterCont.height += 10f;
             movementSpeed = -1000;
+            
         }
         if(characterCont.height == 15) {
             characterCont.height += 0;
