@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TargetRandomPosition : MonoBehaviour {
-    private Transform targetTransform;
+    public Transform targetTransform;
+    private float targetSecondCount = 1;
     public GameObject Targets;
 
 	// Use this for initialization
@@ -11,12 +12,25 @@ public class TargetRandomPosition : MonoBehaviour {
         targetTransform.GetComponent<Transform>();
         Targets.GetComponent<Transform>();
 
-        Vector3 TargetNewPosition = new Vector3(Random.Range(-5f, 5f), Random.Range(-5f, 5f), 0);
-        Instantiate(Targets, TargetNewPosition, Quaternion.identity);
+        InvokeRepeating("CreateTarget", 5.0f, 5.0f);
+
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    void CreateTarget()
+    {
+        targetSecondCount += 1;
+
+        if (targetSecondCount == 50)
+        {
+            Vector3 TargetNewPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-3f, 8f), 30);
+            Instantiate(Targets, TargetNewPosition, Quaternion.identity);
+        }
+
+    }
+    
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 }

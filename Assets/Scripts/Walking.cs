@@ -16,6 +16,11 @@ public class Walking : MonoBehaviour
     Vector3 crouchMoveSpeed;
 
     private CharacterController characterController;
+
+    public Transform YJumpHeight;
+    public float newYValue;
+    private bool IsInAir;
+
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
@@ -25,6 +30,9 @@ public class Walking : MonoBehaviour
     void Start()
     {
         characterCont.GetComponent<CharacterController>();
+        YJumpHeight.GetComponent<Transform>();
+
+        InvokeRepeating("checkJumpHeight", 5.0f, 3.0f);
     }
 
     // Update is called once per frame
@@ -33,6 +41,11 @@ public class Walking : MonoBehaviour
 
         PlayerMovement();
 
+    }
+
+    void checkJumpHeight()
+    {
+        Debug.Log(gameObject.transform.position.y);
     }
 
     private void PlayerMovement()
@@ -61,7 +74,7 @@ public class Walking : MonoBehaviour
             characterCont.height += -10f;
             movementSpeed = -500;
             sprintSpeed = -500;
-            crouchMoveSpeed = new Vector3(movementSpeed, 0, movementSpeed);
+            crouchMoveSpeed = new Vector3(movementSpeed, movementSpeed, movementSpeed);
         }
         else if(Input.GetKeyUp(KeyCode.LeftControl)) {
             characterCont.height += 10f;
@@ -81,7 +94,23 @@ public class Walking : MonoBehaviour
 
         }*/
 
+        /* if (Input.GetKeyDown(KeyCode.Space) && transform.position.y >= 15) {
+            newYValue = newYValue + 1 + transform.position.y;
+            transform.position = new Vector3(transform.position.x, newYValue, transform.position.y);
+            IsInAir = true;
+
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                IsInAir = false;
+                newYValue = newYValue - 1 - transform.position.y;
+            }
+        } */
+
+
+
 
     }
+
+
 
 }
