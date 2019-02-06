@@ -997,6 +997,9 @@ MonoBehaviour:
   anim: {fileID: 111853223657134916}
   ifShooting: 0
   aud: {fileID: 82243595714111768}
+  damage: 10
+  range: 100
+  Cam: {fileID: 0}
 --- !u!114 &114327291372623202
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1014,6 +1017,8 @@ MonoBehaviour:
   sprintSpeed: -2000
   characterCont: {fileID: 143125224096358044}
   characterHeight: 15
+  YJumpHeight: {fileID: 4206870709508118}
+  newYValue: 0
 --- !u!114 &114346575001005522
 MonoBehaviour:
   m_ObjectHideFlags: 1

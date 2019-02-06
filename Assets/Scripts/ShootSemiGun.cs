@@ -8,6 +8,10 @@ public class ShootSemiGun : MonoBehaviour {
     private int semigunShootFrame = 9;
     private bool isEquipped = false;
     private bool didGameStart;
+
+    public float damage = 10f;
+	public float range = 100f;
+	public Camera Cam;
 	// Use this for initialization
 	void Start () {
         anim.GetComponent<Animation>();
@@ -42,5 +46,23 @@ public class ShootSemiGun : MonoBehaviour {
         {
             anim.Stop();
         }
+
+        if(Input.GetButtonDown("Fire1") && isEquipped == false) {
+			ShootGun();
+		}
     }
+
+    void ShootGun() {
+		RaycastHit hit;
+		if(Physics.Raycast(Cam.transform.position, Cam.transform.forward,out hit)) {
+			Debug.Log(hit.transform.name);
+
+            RaycastTargetHit target = hit.transform.GetComponent<RaycastTargetHit>();
+			if(target != null && isEquipped == false) {
+				target.TakeDamage(damage);
+			}
+		}
+	}
+
+
 }
