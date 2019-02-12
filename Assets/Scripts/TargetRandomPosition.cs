@@ -7,30 +7,34 @@ public class TargetRandomPosition : MonoBehaviour {
     private float targetSecondCount = 1;
     public GameObject Targets;
 
+    private bool hasTargetSpawned = false;
 	// Use this for initialization
 	void Start () {
         targetTransform.GetComponent<Transform>();
         Targets.GetComponent<Transform>();
 
-        InvokeRepeating("CreateTarget", 5.0f, 5.0f);
 
     }
 
-    void CreateTarget()
-    {
-        targetSecondCount += 1;
+    
+        
+        
 
-        if (targetSecondCount == 50)
-        {
-            Vector3 TargetNewPosition = new Vector3(Random.Range(-10f, 10f), Random.Range(-3f, 8f), 30);
-            Instantiate(Targets, TargetNewPosition, Quaternion.identity);
-        }
-
-    }
+    
     
 
     // Update is called once per frame
     void Update () {
-		
+		targetSecondCount += 1;
+
+        if (targetSecondCount == 50)
+        {
+            
+            Vector3 TargetNewPosition = new Vector3(Random.Range(30f, 30f), Random.Range(3f, 8f), -95);
+            Instantiate(Targets, TargetNewPosition, Quaternion.identity);
+            targetSecondCount = 1;
+            hasTargetSpawned = true;
+            Destroy(gameObject);
 	}
+    }
 }
