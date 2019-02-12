@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\FollowMouseDraft.cs" />
      <Compile Include="Assets\Scripts\GunSwitch.cs" />
      <Compile Include="Assets\Scripts\RaycastTargetHit.cs" />
+     <Compile Include="Assets\Scripts\ScopeIn.cs" />
      <Compile Include="Assets\Scripts\Shoot.cs" />
      <Compile Include="Assets\Scripts\ShootBullet.cs" />
      <Compile Include="Assets\Scripts\ShootSemiGun.cs" />
