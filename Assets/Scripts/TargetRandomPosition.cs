@@ -7,6 +7,8 @@ public class TargetRandomPosition : MonoBehaviour {
     private float targetSecondCount = 1;
     public GameObject Targets;
 
+    private Quaternion targetRotation = Quaternion.Euler(90,0,0);
+
     private bool hasTargetSpawned = false;
 	// Use this for initialization
 	void Start () {
@@ -15,11 +17,6 @@ public class TargetRandomPosition : MonoBehaviour {
 
 
     }
-
-    
-        
-        
-
     
     
 
@@ -27,11 +24,11 @@ public class TargetRandomPosition : MonoBehaviour {
     void Update () {
 		targetSecondCount += 1;
 
-        if (targetSecondCount == 50)
+        if (targetSecondCount == 75)
         {
             
-            Vector3 TargetNewPosition = new Vector3(Random.Range(30f, 30f), Random.Range(3f, 8f), -95);
-            Instantiate(Targets, TargetNewPosition, Quaternion.identity);
+            Vector3 TargetNewPosition = new Vector3(Random.Range(-30f, 30f), Random.Range(3f, 8f), -96);
+            Instantiate(Targets, TargetNewPosition, targetRotation);
             targetSecondCount = 1;
             hasTargetSpawned = true;
             Destroy(gameObject);

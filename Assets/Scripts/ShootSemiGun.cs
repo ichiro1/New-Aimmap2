@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShootSemiGun : MonoBehaviour {
     public Animation anim;
@@ -15,6 +16,11 @@ public class ShootSemiGun : MonoBehaviour {
     public float damage = 10f;
 	public float range = 100f;
 	public Camera Cam;
+
+    public float AmountOfBullets = 13;
+    public Text AmmoCountText;
+
+    private bool ifAmmoRemaining;
 	// Use this for initialization
 	void Start () {
         anim.GetComponent<Animation>();
@@ -36,8 +42,27 @@ public class ShootSemiGun : MonoBehaviour {
             if(isEquipped == true) {
                 aud.mute = !aud.mute;
                 aud2.mute = !aud.mute;
+                
+            if(AmountOfBullets <= 0) {
+            ifAmmoRemaining = false;
+                
             }
+            if(AmountOfBullets > 0) {
+                ifAmmoRemaining = true;
+            }
+
+            if(Input.GetKeyDown("r")) {
+                AmountOfBullets = 13;
+            }
+
+            }
+            
             isEquipped = false;
+
+            
+        }
+        if(isEquipped == false) {
+            AmmoCountText.text = AmountOfBullets + "/13";
         }
 
         semigunShootFrame = semigunShootFrame += 1;
@@ -47,6 +72,13 @@ public class ShootSemiGun : MonoBehaviour {
             soundAfterShot +=1;
             aud.Play();
             ShellFall();
+            if(isEquipped == false) {
+                AmountOfBullets -= 1;
+            }
+            else if(isEquipped == true) {
+                AmountOfBullets = AmountOfBullets;
+            }
+            
         }
         if (Input.GetMouseButtonUp(0))
         {
