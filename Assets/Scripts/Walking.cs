@@ -14,6 +14,8 @@ public class Walking : MonoBehaviour
 
     public float characterHeight;
     Vector3 crouchMoveSpeed;
+    public AudioSource aud;
+    private bool audioPlaying = false;
 
     private CharacterController characterController;
 
@@ -31,6 +33,7 @@ public class Walking : MonoBehaviour
     {
         characterCont.GetComponent<CharacterController>();
         YJumpHeight.GetComponent<Transform>();
+        aud.GetComponent<AudioSource>();
 
         InvokeRepeating("checkJumpHeight", 5.0f, 3.0f);
     }
@@ -88,6 +91,22 @@ public class Walking : MonoBehaviour
             characterCont.height += 0;
         }
 
+
+        if(Input.GetKeyDown("w") || Input.GetKeyDown("s") || Input.GetKeyDown("a") || Input.GetKeyDown("d")) {
+            aud.Play();
+            audioPlaying = true;
+
+        }
+
+        if (audioPlaying == true && Input.GetKeyDown("w") || Input.GetKeyDown("s") || Input.GetKeyDown("a") || Input.GetKeyDown("d"))
+        {
+
+        }
+        if (Input.GetKeyUp("w") && Input.GetKeyUp("s") && Input.GetKeyUp("a") && Input.GetKeyUp("d"))
+        {
+            aud.Stop();
+            audioPlaying = false;
+        }
         /*if (Input.GetKeyDown("w") && Input.GetKeyDown(KeyCode.LeftShift)) {
             Vector3 sprintforward = transform.forward * horizSprintInput; 
             characterController.SimpleMove(sprintforward);

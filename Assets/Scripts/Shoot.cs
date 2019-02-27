@@ -7,6 +7,7 @@ public class Shoot : MonoBehaviour {
 	public bool ifShooting;
 	public AudioSource aud;
 	public AudioSource aud2;
+    public AudioSource aud3;
 	private float frameShotCount = 9;
     private bool isEquipped = false;
 
@@ -21,6 +22,7 @@ public class Shoot : MonoBehaviour {
 		ifShooting = false;
 		aud.GetComponent<AudioSource> ();
 		aud2.GetComponent<AudioSource> ();
+        aud3.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -36,8 +38,8 @@ public class Shoot : MonoBehaviour {
         else if(Input.GetKeyDown("1")) {
             if(isEquipped == true) {
                 aud.mute = !aud.mute;
-				
-			if(AmountOfBullets <= 0) {
+                isEquipped = false;
+                if (AmountOfBullets <= 0) {
             ifAmmoRemaining = false;
                 aud2.Play();
             }
@@ -45,17 +47,20 @@ public class Shoot : MonoBehaviour {
                 ifAmmoRemaining = true;
             }
 
-            if(Input.GetKeyDown("r") && ifAmmoRemaining == false) {
-                AmountOfBullets = 30;
-            }
+            
             }
 			
-            isEquipped = false;
+
         }
 
 		if(isEquipped == false) {
 			AmmoCountText.text = AmountOfBullets + "/30";
-		}
+            if (Input.GetKeyDown("r"))
+            {
+                AmountOfBullets = 30;
+                aud3.Play();
+            }
+        }
         //frameShotCount = frameShotCount * Time.deltaTime;
 
 		if (Input.GetMouseButton (0)) {
@@ -67,6 +72,7 @@ public class Shoot : MonoBehaviour {
 			ifShooting = false;
 			anim.Stop ();
 			aud.Stop ();
+            frameShotCount = 14;
 		}
 		if (frameShotCount == 15) {
 			aud.Play ();
@@ -82,7 +88,7 @@ public class Shoot : MonoBehaviour {
 			frameShotCount = 1;
 		}
 
-		if(Input.GetButton("Fire1") && frameShotCount == 15 && isEquipped == false) {
+        if(Input.GetButton("Fire1") && frameShotCount == 15 && isEquipped == false && AmountOfBullets > 0) {
 			ShootGun();
 		}
 		

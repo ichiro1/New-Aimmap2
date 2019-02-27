@@ -7,6 +7,7 @@ public class ShootSemiGun : MonoBehaviour {
     public Animation anim;
     public AudioSource aud;
     public AudioSource aud2;
+    public AudioSource aud3;
     private int semigunShootFrame = 9;
     private bool isEquipped = false;
     private bool didGameStart;
@@ -26,6 +27,7 @@ public class ShootSemiGun : MonoBehaviour {
         anim.GetComponent<Animation>();
         aud.GetComponent<AudioSource>();
         aud2.GetComponent<AudioSource>();
+        aud3.GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -45,16 +47,11 @@ public class ShootSemiGun : MonoBehaviour {
                 
             if(AmountOfBullets <= 0) {
             ifAmmoRemaining = false;
-                
+                    damage = 0;
             }
             if(AmountOfBullets > 0) {
                 ifAmmoRemaining = true;
             }
-
-            if(Input.GetKeyDown("r")) {
-                AmountOfBullets = 13;
-            }
-
             }
             
             isEquipped = false;
@@ -62,6 +59,10 @@ public class ShootSemiGun : MonoBehaviour {
             
         }
         if(isEquipped == false) {
+            if (Input.GetKeyDown("r")) {
+                AmountOfBullets = 13;
+                aud3.Play();
+            }
             AmmoCountText.text = AmountOfBullets + "/13";
         }
 
@@ -83,9 +84,10 @@ public class ShootSemiGun : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             anim.Stop();
+            semigunShootFrame = 9;
         }
 
-        if(Input.GetButtonDown("Fire1") && isEquipped == false) {
+        if (Input.GetButtonDown("Fire1") && isEquipped == false && AmountOfBullets > 0) {
 			ShootGun();
 		}
     }
