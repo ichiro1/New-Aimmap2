@@ -7,13 +7,17 @@ public class FollowMouseDraft : MonoBehaviour {
     [SerializeField] private float mouseSensitivity;
 
     [SerializeField] private Transform playerBody;
-
+    public Camera cam;
+    private float fov = 50;
     private float xAxisClamp;
+    private bool zoomedIn = false;
+    private bool button1LetGo;
 
 	// Use this for initialization
 	void Start () {
         LockCursor();
         xAxisClamp = 0;
+        cam.GetComponent<Camera>();
 	}
     private void LockCursor() {
         Cursor.lockState = CursorLockMode.Locked;
@@ -42,6 +46,20 @@ public class FollowMouseDraft : MonoBehaviour {
 
         transform.Rotate(Vector3.right * mouseY);
         playerBody.Rotate(Vector3.down * mouseX);
+
+
+        if(Input.GetMouseButtonDown(1)) {
+            cam.fieldOfView = fov;
+            zoomedIn = true;
+        }
+        if(Input.GetMouseButtonUp(1)) {
+            cam.fieldOfView = fov + 10;
+        }
+
+        if (Input.GetMouseButtonDown(1) && zoomedIn == true && button1LetGo == false) {
+
+            zoomedIn = false;
+        } 
     }
 
     private void ClampXAxisRotationToValue(float value) {

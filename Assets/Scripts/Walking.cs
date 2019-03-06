@@ -22,6 +22,7 @@ public class Walking : MonoBehaviour
     public Transform YJumpHeight;
     public float newYValue;
     private bool IsInAir;
+    private bool wasdPressed = false;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class Walking : MonoBehaviour
         aud.GetComponent<AudioSource>();
 
         InvokeRepeating("checkJumpHeight", 5.0f, 3.0f);
+        aud.mute = !aud.mute;
     }
 
     // Update is called once per frame
@@ -92,21 +94,30 @@ public class Walking : MonoBehaviour
         }
 
 
-        if(Input.GetKeyDown("w") || Input.GetKeyDown("s") || Input.GetKeyDown("a") || Input.GetKeyDown("d")) {
+        /*if(Input.GetKey("w") || Input.GetKey("s") || Input.GetKey("a") || Input.GetKey("d")) {
+            aud.mute = !aud.mute;
+        }
+
+        if (audioPlaying == true && wasdPressed) {
             aud.Play();
-            audioPlaying = true;
-
         }
 
-        if (audioPlaying == true && Input.GetKeyDown("w") || Input.GetKeyDown("s") || Input.GetKeyDown("a") || Input.GetKeyDown("d"))
-        {
-
-        }
         if (Input.GetKeyUp("w") && Input.GetKeyUp("s") && Input.GetKeyUp("a") && Input.GetKeyUp("d"))
         {
             aud.Stop();
             audioPlaying = false;
+            wasdPressed = true;
         }
+        */
+
+
+
+
+
+
+
+
+
         /*if (Input.GetKeyDown("w") && Input.GetKeyDown(KeyCode.LeftShift)) {
             Vector3 sprintforward = transform.forward * horizSprintInput; 
             characterController.SimpleMove(sprintforward);

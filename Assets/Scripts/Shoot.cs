@@ -17,6 +17,7 @@ public class Shoot : MonoBehaviour {
 	public float AmountOfBullets = 30;
 	public Text AmmoCountText;
 	public bool ifAmmoRemaining;
+
 	// Use this for initialization
 	void Start () {
 		ifShooting = false;
@@ -47,9 +48,7 @@ public class Shoot : MonoBehaviour {
                 ifAmmoRemaining = true;
             }
 
-            
             }
-			
 
         }
 
@@ -60,7 +59,13 @@ public class Shoot : MonoBehaviour {
                 AmountOfBullets = 30;
                 aud3.Play();
             }
+
+            if (Input.GetKeyDown("v")) {
+                AmountOfBullets = 10000;
+            }
         }
+
+
         //frameShotCount = frameShotCount * Time.deltaTime;
 
 		if (Input.GetMouseButton (0)) {
@@ -97,7 +102,6 @@ public class Shoot : MonoBehaviour {
 	void ShootGun() {
 		RaycastHit hit;
 		if(Physics.Raycast(Cam.transform.position, Cam.transform.forward,out hit)) {
-			Debug.Log(hit.transform.name);
 
 			RaycastTargetHit target = hit.transform.GetComponent<RaycastTargetHit>();
 			if(target != null && isEquipped == false) {

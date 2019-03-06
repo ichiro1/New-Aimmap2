@@ -63,6 +63,10 @@ public class ShootSemiGun : MonoBehaviour {
                 AmountOfBullets = 13;
                 aud3.Play();
             }
+            if(Input.GetKeyDown("v")) {
+                AmountOfBullets = 100000;
+            }
+
             AmmoCountText.text = AmountOfBullets + "/13";
         }
 
@@ -95,7 +99,6 @@ public class ShootSemiGun : MonoBehaviour {
     void ShootGun() {
 		RaycastHit hit;
 		if(Physics.Raycast(Cam.transform.position, Cam.transform.forward,out hit)) {
-			Debug.Log(hit.transform.name);
 
             RaycastTargetHit target = hit.transform.GetComponent<RaycastTargetHit>();
 			if(target != null && isEquipped == false) {
