@@ -11,7 +11,7 @@ public class Shoot : MonoBehaviour {
 	private float frameShotCount = 9;
     private bool isEquipped = false;
 
-	public float damage = 10f;
+	public float damage = 100f;
 	public float range = 100f;
 	public Camera Cam;
 	public float AmountOfBullets = 30;
