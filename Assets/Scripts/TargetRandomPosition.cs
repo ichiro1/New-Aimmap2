@@ -8,7 +8,7 @@ public class TargetRandomPosition : MonoBehaviour {
     public GameObject Targets;
 
     private Quaternion targetRotation = Quaternion.Euler(90,0,0);
-	public float targetTransformZ = -96;
+	private float targetTransformZ = -96;
 
     private bool hasTargetSpawned = false;
     private float uPressed;
@@ -26,13 +26,13 @@ public class TargetRandomPosition : MonoBehaviour {
     void Update () {
 		targetSecondCount += 1;
         if(Input.GetKeyDown("u")) {
-            
-            Vector3 TargetNewPosition = new Vector3(Random.Range(-20f, 30f), Random.Range(10f, 18f), targetTransformZ -= 20);
+            targetTransformZ -= 20;
             uPressed += 1;
             if(uPressed >= 20) {
-            Debug.Log("Transform Changed");
-            targetTransformZ += 400;
             uPressed = 0;
+        }
+        if(uPressed < 20) {
+            targetTransformZ -= 0f;
         }
 		}
         

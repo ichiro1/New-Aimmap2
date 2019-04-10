@@ -27,6 +27,7 @@ ModelImporter:
     4300002: AK_47_Magazine
     4300004: Ak_47_Shell
     7400000: Shoot
+    9500000: //RootNode
     11100000: //RootNode
   externalObjects:
   - first:
@@ -58,7 +59,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -118,7 +119,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 0
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -143,7 +144,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 1
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

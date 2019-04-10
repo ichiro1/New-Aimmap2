@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class Shoot : MonoBehaviour {
-	public Animation anim;
+	public Animator anim;
 	public bool ifShooting;
 	public AudioSource aud;
 	public AudioSource aud2;
@@ -20,6 +20,7 @@ public class Shoot : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		anim = GetComponent<Animator>();
 		ifShooting = false;
 		aud.GetComponent<AudioSource> ();
 		aud2.GetComponent<AudioSource> ();
@@ -58,6 +59,7 @@ public class Shoot : MonoBehaviour {
             {
                 AmountOfBullets = 30;
                 aud3.Play();
+				anim.SetTrigger("Reloading");
             }
 
             if (Input.GetKeyDown("v")) {
@@ -70,12 +72,14 @@ public class Shoot : MonoBehaviour {
 
 		if (Input.GetMouseButton (0)) {
 			ifShooting = true;
-			anim.Play ();
+			// anim.Play ();
 			frameShotCount += 1;
+			anim.SetBool("Shooting", true);
 		}
 		if (Input.GetMouseButtonUp (0) && ifShooting == true) {
 			ifShooting = false;
-			anim.Stop ();
+			// anim.Stop ();
+			anim.SetBool("Shooting", false);
 			aud.Stop ();
             frameShotCount = 14;
 		}
@@ -83,6 +87,7 @@ public class Shoot : MonoBehaviour {
 			aud.Play ();
 			if(isEquipped == false) {
 				AmountOfBullets -=1;
+				anim.SetBool("Shooting", true);
 			}
 			if(isEquipped == true) {
 				AmountOfBullets = AmountOfBullets;

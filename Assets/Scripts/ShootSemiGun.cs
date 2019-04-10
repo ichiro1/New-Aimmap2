@@ -8,7 +8,7 @@ public class ShootSemiGun : MonoBehaviour {
     public AudioSource aud;
     public AudioSource aud2;
     public AudioSource aud3;
-    private int semigunShootFrame = 9;
+    private float semigunShootFrame;
     private bool isEquipped = false;
     private bool didGameStart;
     
@@ -70,9 +70,9 @@ public class ShootSemiGun : MonoBehaviour {
             AmmoCountText.text = AmountOfBullets + "/13";
         }
 
-        semigunShootFrame = semigunShootFrame += 1;
+        semigunShootFrame += Time.deltaTime;
 
-        if(Input.GetMouseButtonDown(0) && semigunShootFrame >= 10) {
+        if(Input.GetMouseButtonDown(0) && semigunShootFrame >= 1) {
             anim.Play();
             soundAfterShot +=1;
             aud.Play();
@@ -88,7 +88,7 @@ public class ShootSemiGun : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             anim.Stop();
-            semigunShootFrame = 9;
+            semigunShootFrame = 0.9f;
         }
 
         if (Input.GetButtonDown("Fire1") && isEquipped == false && AmountOfBullets > 0) {
