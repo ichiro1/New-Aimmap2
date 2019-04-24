@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class ShootSemiGun : MonoBehaviour {
-    public Animation anim;
+    public Animator anim;
     public AudioSource aud;
     public AudioSource aud2;
     public AudioSource aud3;
@@ -24,7 +24,7 @@ public class ShootSemiGun : MonoBehaviour {
     private bool ifAmmoRemaining;
 	// Use this for initialization
 	void Start () {
-        anim.GetComponent<Animation>();
+        anim = GetComponent<Animator>();
         aud.GetComponent<AudioSource>();
         aud2.GetComponent<AudioSource>();
         aud3.GetComponent<AudioSource>();
@@ -62,6 +62,7 @@ public class ShootSemiGun : MonoBehaviour {
             if (Input.GetKeyDown("r")) {
                 AmountOfBullets = 13;
                 aud3.Play();
+                anim.SetTrigger("Reloading");
             }
             if(Input.GetKeyDown("v")) {
                 AmountOfBullets = 100000;
@@ -73,7 +74,7 @@ public class ShootSemiGun : MonoBehaviour {
         semigunShootFrame += Time.deltaTime;
 
         if(Input.GetMouseButtonDown(0) && semigunShootFrame >= 1) {
-            anim.Play();
+            anim.SetBool("Shooting", true);
             soundAfterShot +=1;
             aud.Play();
             ShellFall();
@@ -87,7 +88,7 @@ public class ShootSemiGun : MonoBehaviour {
         }
         if (Input.GetMouseButtonUp(0))
         {
-            anim.Stop();
+            anim.SetBool("Shooting", false);
             semigunShootFrame = 0.9f;
         }
 
