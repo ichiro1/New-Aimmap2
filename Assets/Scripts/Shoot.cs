@@ -74,6 +74,7 @@ public class Shoot : MonoBehaviour {
 			ifShooting = true;
 			// anim.Play ();
 			frameShotCount += 1;
+
 			anim.SetBool("Shooting", true);
 		}
 		if (Input.GetMouseButtonUp (0) && ifShooting == true) {
