@@ -17,6 +17,7 @@ public class Shoot : MonoBehaviour {
 	public float AmountOfBullets = 30;
 	public Text AmmoCountText;
 	public bool ifAmmoRemaining;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -60,6 +61,7 @@ public class Shoot : MonoBehaviour {
                 AmountOfBullets = 30;
                 aud3.Play();
 				anim.SetTrigger("Reloading");
+				//AkInspectChallenge was supposed to be for an inspect, but it looked better as a reload. 
             }
 
             if (Input.GetKeyDown("v")) {
@@ -112,6 +114,8 @@ public class Shoot : MonoBehaviour {
 			RaycastTargetHit target = hit.transform.GetComponent<RaycastTargetHit>();
 			if(target != null && isEquipped == false) {
 				target.TakeDamage(damage);
+
+
 			}
 		}
 	}

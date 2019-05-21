@@ -14,6 +14,7 @@ public class GunSwitch : MonoBehaviour {
 	public Renderer ColtShell;
 	public Renderer ColtMagazine;
 	public Renderer ColtSlide;
+	public Renderer AkLeftHand;
 	private bool gunSwitcher;
 
 	// Use this for initialization
@@ -31,6 +32,7 @@ public class GunSwitch : MonoBehaviour {
 			ColtShell.GetComponent<MeshRenderer> ();
 			ColtMagazine.GetComponent<MeshRenderer> ();
 			ColtSlide.GetComponent<MeshRenderer> ();
+			AkLeftHand.GetComponent<MeshRenderer>();
 
 			ColtShell.enabled = false;
 			ColtMagazine.enabled = false;
@@ -52,6 +54,7 @@ public class GunSwitch : MonoBehaviour {
 			Ak.enabled = true;
 			AkMagazine.enabled = true;
 			AkShell.enabled = true;
+			AkLeftHand.enabled = true;
 
 			Colt.enabled = false;
             ColtShell.enabled = false;
@@ -67,6 +70,7 @@ public class GunSwitch : MonoBehaviour {
 			Ak.enabled = false;
             AkMagazine.enabled = false;
             AkShell.enabled = false;
+			AkLeftHand.enabled = false;
 		}
 
 	}
