@@ -17,6 +17,7 @@ public class Shoot : MonoBehaviour {
 	public float AmountOfBullets = 30;
 	public Text AmmoCountText;
 	public bool ifAmmoRemaining;
+	public bool rPressed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -59,9 +60,11 @@ public class Shoot : MonoBehaviour {
             {
                 AmountOfBullets = 30;
                 aud3.Play();
-				anim.SetTrigger("Reloading");
+				anim.SetBool("Reloading", true);
+				if(Input.GetKeyUp("r")) {
+					anim.SetBool("Reloading", false);
+				}
             }
-
             if (Input.GetKeyDown("v")) {
                 AmountOfBullets = 10000;
             }
