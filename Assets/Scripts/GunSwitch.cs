@@ -14,6 +14,8 @@ public class GunSwitch : MonoBehaviour {
 	public Renderer ColtShell;
 	public Renderer ColtMagazine;
 	public Renderer ColtSlide;
+	public Renderer AkLeftHand;
+	public Renderer BerettaRightHand;
 	private bool gunSwitcher;
 
 	// Use this for initialization
@@ -21,7 +23,6 @@ public class GunSwitch : MonoBehaviour {
 		gunbody1.GetComponent<Transform>();
 		gunbody2.GetComponent<Transform>();
 		if(true) {
-		Debug.Log (gunbody1.position);
 			Ak.GetComponent<MeshRenderer> ();
 			Colt.GetComponent<MeshRenderer> ();
 			Colt.enabled = false;
@@ -31,6 +32,8 @@ public class GunSwitch : MonoBehaviour {
 			ColtShell.GetComponent<MeshRenderer> ();
 			ColtMagazine.GetComponent<MeshRenderer> ();
 			ColtSlide.GetComponent<MeshRenderer> ();
+			AkLeftHand.GetComponent<MeshRenderer>();
+			BerettaRightHand.GetComponent<MeshRenderer>();
 
 			ColtShell.enabled = false;
 			ColtMagazine.enabled = false;
@@ -52,21 +55,27 @@ public class GunSwitch : MonoBehaviour {
 			Ak.enabled = true;
 			AkMagazine.enabled = true;
 			AkShell.enabled = true;
+			AkLeftHand.enabled = true;
 
 			Colt.enabled = false;
             ColtShell.enabled = false;
             ColtMagazine.enabled = false;
             ColtSlide.enabled = false;
+			BerettaRightHand.enabled = false;
+
 		} 
 		else if(gunSwitcher == true){
 			Colt.enabled = true;
 			ColtShell.enabled = true;
 			ColtMagazine.enabled = true;
 			ColtSlide.enabled = true;
+			BerettaRightHand.enabled = true;
 
 			Ak.enabled = false;
             AkMagazine.enabled = false;
             AkShell.enabled = false;
+			AkLeftHand.enabled = false;
+			
 		}
 
 	}
