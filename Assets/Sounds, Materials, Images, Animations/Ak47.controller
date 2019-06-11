@@ -42,13 +42,10 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-<<<<<<< HEAD
   - m_ConditionMode: 2
     m_ConditionEvent: Reloading
-=======
   - m_ConditionMode: 1
     m_ConditionEvent: Shooting
->>>>>>> 7e47f8fc2794671e8de2a4222568b2098a8f388e
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102314278519671480}
@@ -58,9 +55,7 @@ AnimatorStateTransition:
   serializedVersion: 3
   m_TransitionDuration: 0.22557867
   m_TransitionOffset: 0
-<<<<<<< HEAD
   m_ExitTime: 0
-=======
   m_ExitTime: 0.041628223
   m_HasExitTime: 1
   m_HasFixedDuration: 1
@@ -109,7 +104,6 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0
   m_ExitTime: 0.75
->>>>>>> 7e47f8fc2794671e8de2a4222568b2098a8f388e
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -132,15 +126,12 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-<<<<<<< HEAD
   m_TransitionDuration: 0.24999997
   m_TransitionOffset: 0.003226616
   m_ExitTime: 0.119514555
-=======
   m_TransitionDuration: 0.25
   m_TransitionOffset: 0.8478996
   m_ExitTime: 0.6388308
->>>>>>> 7e47f8fc2794671e8de2a4222568b2098a8f388e
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -363,11 +354,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_Name: Reloading
-=======
   m_Name: AkIdleMaybe
->>>>>>> 7e47f8fc2794671e8de2a4222568b2098a8f388e
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -393,11 +381,8 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_Name: AkIdleMaybe
-=======
   m_Name: AkRecoil
->>>>>>> 7e47f8fc2794671e8de2a4222568b2098a8f388e
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
