@@ -14,13 +14,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Reloading
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -43,7 +43,8 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 2
-    m_ConditionEvent: Reloading
+    m_ConditionEvent: ReloadingBool
+    m_EventTreshold: 0
   - m_ConditionMode: 1
     m_ConditionEvent: Shooting
     m_EventTreshold: 0
@@ -56,7 +57,6 @@ AnimatorStateTransition:
   m_TransitionDuration: 0.22557867
   m_TransitionOffset: 0
   m_ExitTime: 0
-  m_ExitTime: 0.041628223
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -117,7 +117,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: Reloading
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -126,12 +126,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.24999997
-  m_TransitionOffset: 0.003226616
-  m_ExitTime: 0.119514555
-  m_TransitionDuration: 0.25
-  m_TransitionOffset: 0.8478996
-  m_ExitTime: 0.6388308
+  m_TransitionDuration: 0.25000024
+  m_TransitionOffset: 3.3343606
+  m_ExitTime: 0.8891631
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -198,9 +195,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.24999984
-  m_TransitionOffset: 0
-  m_ExitTime: 0
+  m_TransitionDuration: 0.24999979
+  m_TransitionOffset: 0.005603429
+  m_ExitTime: 0.010506223
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -355,7 +352,6 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Reloading
-  m_Name: AkIdleMaybe
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -382,7 +378,6 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AkIdleMaybe
-  m_Name: AkRecoil
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:

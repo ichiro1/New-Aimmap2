@@ -51,30 +51,28 @@ public class Shoot : MonoBehaviour {
             if(AmountOfBullets > 0) {
                 ifAmmoRemaining = true;
             }
-
             }
-
         }
-
 		if(isEquipped == false) {
 			AmmoCountText.text = AmountOfBullets + "/30";
             if (Input.GetKeyDown("r"))
             {
                 AmountOfBullets = 30;
                 aud3.Play();
+				rPressed = true;
 				anim.SetBool("Reloading", true);
-				if(Input.GetKeyUp("r")) {
-					anim.SetBool("Reloading", false);
-				}
-				anim.SetTrigger("Reloading");
+				
 				//AkInspectChallenge was supposed to be for an inspect, but it looked better as a reload. 
             }
+			if(Input.GetKeyUp("r") && rPressed == true) {
+				rPressed = false;
+				anim.SetBool("Reloading", false);
+			}
+				
             if (Input.GetKeyDown("v")) {
                 AmountOfBullets = 10000;
             }
         }
-
-
         //frameShotCount = frameShotCount * Time.deltaTime;
 
 		if (Input.GetMouseButton (0)) {
