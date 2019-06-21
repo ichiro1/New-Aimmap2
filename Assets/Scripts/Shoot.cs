@@ -36,7 +36,7 @@ public class Shoot : MonoBehaviour {
         if (Input.GetKeyDown("2")) {
             if(isEquipped == false) {
                 aud.mute = !aud.mute;
-
+				anim.SetBool("Equip", false);
             }
             isEquipped = true;
         }
@@ -44,6 +44,7 @@ public class Shoot : MonoBehaviour {
             if(isEquipped == true) {
                 aud.mute = !aud.mute;
                 isEquipped = false;
+				
                 if (AmountOfBullets <= 0) {
             ifAmmoRemaining = false;
                 aud2.Play();
@@ -55,6 +56,7 @@ public class Shoot : MonoBehaviour {
         }
 		if(isEquipped == false) {
 			AmmoCountText.text = AmountOfBullets + "/30";
+			anim.SetBool("Equip", true);
             if (Input.GetKeyDown("r"))
             {
                 AmountOfBullets = 30;
