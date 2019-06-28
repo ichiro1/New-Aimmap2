@@ -14,7 +14,7 @@ public class ShootSemiGun : MonoBehaviour {
     
     private int soundAfterShot = 1;
 
-    public float damage = 10f;
+    public float damage = 20f;
 	public float range = 100f;
 	public Camera Cam;
 

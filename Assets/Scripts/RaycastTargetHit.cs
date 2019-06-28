@@ -26,7 +26,7 @@ public class RaycastTargetHit : MonoBehaviour {
 		if(health <= 0f) {
 			totalPoints = totalPoints += 100;
             health = 20f;
-            Vector3 TargetNewPosition = new Vector3(Random.Range(-30f, 30f), Random.Range(3f, 8f), targetTransformZ);
+            Vector3 TargetNewPosition = new Vector3(Random.Range(-30f, 30f), Random.Range(3f, 15f), targetTransformZ);
             Instantiate(Targets, TargetNewPosition, targetRotation);
 			
 			Die();

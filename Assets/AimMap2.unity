@@ -1046,6 +1046,11 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 1204284074}
+    - target: {fileID: 114225217204655952, guid: 8f2259815f095411982be1d6ab84826a,
+        type: 3}
+      propertyPath: damage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 82249611055155512, guid: 8f2259815f095411982be1d6ab84826a,
         type: 3}
       propertyPath: BypassListenerEffects
@@ -3719,7 +3724,7 @@ PrefabInstance:
     - target: {fileID: 2890297880181931635, guid: 8131ff3bccb644fd2a445618e1c917d0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.990002
+      value: -35.47
       objectReference: {fileID: 0}
     - target: {fileID: 2890297880181931635, guid: 8131ff3bccb644fd2a445618e1c917d0,
         type: 3}
@@ -3995,7 +4000,7 @@ PrefabInstance:
     - target: {fileID: 7845364284109996527, guid: 5be1ef83019bd489fbf28f4538aad3cb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.4900007
+      value: 1.12
       objectReference: {fileID: 0}
     - target: {fileID: 7845364284109996527, guid: 5be1ef83019bd489fbf28f4538aad3cb,
         type: 3}
