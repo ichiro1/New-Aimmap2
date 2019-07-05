@@ -4,11 +4,6 @@
 -langversion:4
 -out:"Temp/Assembly-CSharp.dll"
 -nostdlib
--r:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
--r:"Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll"
--r:"Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll"
--r:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
--r:"Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -77,11 +72,11 @@
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Core.dll"
@@ -109,7 +104,6 @@
 -define:PLATFORM_ARCH_64
 -define:UNITY_64
 -define:UNITY_INCLUDE_TESTS
--define:UNITY_ANALYTICS
 -define:ENABLE_AUDIO
 -define:ENABLE_CACHING
 -define:ENABLE_CLOTH
@@ -192,6 +186,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
 "Assets/Scripts/AmmoCount.cs"
 "Assets/Scripts/FollowMouse.cs"
 "Assets/Scripts/FollowMouseDraft.cs"

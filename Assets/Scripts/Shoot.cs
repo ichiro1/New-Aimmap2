@@ -77,7 +77,16 @@ public class Shoot : MonoBehaviour {
         }
         //frameShotCount = frameShotCount * Time.deltaTime;
 
-		if (Input.GetMouseButton (0)) {
+        if(Input.GetMouseButton(1))
+        {
+            anim.SetBool("ScopedIn", true);
+        }
+        else if(Input.GetMouseButtonUp(1))
+        {
+            anim.SetBool("ScopedIn", false);
+        }
+
+        if (Input.GetMouseButton (0)) {
 			ifShooting = true;
 			// anim.Play ();
 			frameShotCount += 1;

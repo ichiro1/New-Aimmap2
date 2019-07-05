@@ -80,13 +80,12 @@
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.ads@2.0.8/UnityEngine.Advertisements.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.purchasing@2.0.3/UnityEngine.Purchasing.dll"
--r:"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll"
+-r:"/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll"
+-r:"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/mscorlib.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.dll"
 -r:"/Applications/Unity/Hub/Editor/2018.4.3f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unity/System.Core.dll"
@@ -197,6 +196,7 @@
 -define:ENABLE_UNITY_COLLECTIONS_CHECKS
 -define:ENABLE_BURST_AOT
 -define:UNITY_TEAM_LICENSE
-"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/AssemblyInfo.cs"
-"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacy.cs"
-"/Users/ucode/Desktop/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacyButton.cs"
+-define:ENABLE_VSTU
+"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/AssemblyInfo.cs"
+"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacy.cs"
+"/Users/ucode/Downloads/AimMapTest/Library/PackageCache/com.unity.analytics@3.2.2/DataPrivacy/DataPrivacyButton.cs"
