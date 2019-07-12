@@ -71,6 +71,13 @@ public class ShootSemiGun : MonoBehaviour {
             AmmoCountText.text = AmountOfBullets + "/13";
         }
 
+        if(Input.GetMouseButton(1)) {
+            anim.SetBool("ScopeIn", true);
+        }
+        else if(Input.GetMouseButtonUp(1)) {
+            anim.SetBool("ScopeIn", false);
+        }
+
         semigunShootFrame += Time.deltaTime;
 
         if(Input.GetMouseButtonDown(0) && semigunShootFrame >= 1) {

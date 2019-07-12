@@ -37,6 +37,6 @@ public class RaycastTargetHit : MonoBehaviour {
 	void Die() {
 		Destroy(gameObject);
 		pointDisplay.text = "Points: " + totalPoints;
-		Debug.Log(totalPoints);
+		//Debug.Log(totalPoints);
 	}
 }
